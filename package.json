@@ -1,0 +1,33 @@
+{
+  "name": "testes-pactum",
+  "version": "1.0.0",
+  "description": "Testes com Pactum",
+  "main": "index.js",
+  "scripts": {
+    "test:categoryRest": "mocha ./api/category.test.js",
+    "test:categoryProvider": "mocha ./contract/categoryProvider.test.js",
+    "test:categoryConsumer": "mocha ./contract/categoryConsumer.test.js",
+    "test:productRest": "mocha ./api/product.test.js",
+    "test:productProvider": "mocha ./contract/productProvider.test.js",
+    "test:productConsumer": "mocha ./contract/productProvider.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasSilva-droid/Testes-PactumJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NicolasSilva-droid/Testes-PactumJs/issues"
+  },
+  "homepage": "https://github.com/NicolasSilva-droid/Testes-PactumJs#readme",
+  "devDependencies": {
+    "mocha": "^11.7.5",
+    "pactum": "^3.8.0"
+  },
+  "dependencies": {
+    "pactum-flow-plugin": "^0.1.4"
+  }
+}
