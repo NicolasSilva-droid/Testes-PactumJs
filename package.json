@@ -9,7 +9,12 @@
     "test:categoryConsumer": "mocha ./contract/categoryConsumer.test.js",
     "test:productRest": "mocha ./api/product.test.js",
     "test:productProvider": "mocha ./contract/productProvider.test.js",
-    "test:productConsumer": "mocha ./contract/productProvider.test.js"
+    "test:productConsumer": "mocha ./contract/productProvider.test.js",
+    "test": "npm run cy:run",
+    "start": "npx serverest",
+    "cy:run": "npx cypress run",
+    "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json > mochawesome-reporter",
+    "cy:run-ci": "start-server-and-test start http://localhost3000/api-doc test"
   },
   "repository": {
     "type": "git",
@@ -28,6 +33,10 @@
     "pactum": "^3.8.0"
   },
   "dependencies": {
-    "pactum-flow-plugin": "^0.1.4"
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "pactum-flow-plugin": "^0.1.4",
+    "start-server-and-test": "^2.1.3"
   }
 }
